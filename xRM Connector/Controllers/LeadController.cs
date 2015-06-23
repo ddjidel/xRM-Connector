@@ -5,10 +5,13 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Configuration;
-using System.IO;
 using Microsoft.Xrm.Sdk;
 using Microsoft.Xrm.Client;
 using Microsoft.Xrm.Client.Services;
+using System.IO;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+
 
 namespace xRM_Connector.Controllers
 {
