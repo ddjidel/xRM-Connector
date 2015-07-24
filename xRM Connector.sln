@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.22823.1
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xRM Connector", "xRM Connector\xRM Connector.csproj", "{390F0D75-F994-4B6D-8ECE-8117DEF2456D}"
 EndProject
@@ -14,6 +14,11 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{F64B5240-D011-4FAE-937E-61C64D7D5FA4}"
 	ProjectSection(SolutionItems) = preProject
 		PublishScripts\Configurations\xRMConnector-WAWS-dev.json = PublishScripts\Configurations\xRMConnector-WAWS-dev.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{723CBE0D-8987-4718-ADE2-7F8F219F703B}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
 	EndProjectSection
 EndProject
 Global

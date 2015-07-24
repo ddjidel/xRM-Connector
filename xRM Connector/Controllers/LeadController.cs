@@ -20,10 +20,10 @@ namespace xRM_Connector.Controllers
         public string Subject { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string NoteSubject { get; set; }
-        public string FileName { get; set; }
-        public string MimeType { get; set; }
-        public byte[] Data { get; set; }
+        // public string NoteSubject { get; set; }
+        // public string FileName { get; set; }
+        // public string MimeType { get; set; }
+        // public byte[] Data { get; set; }
     }
     public class LeadController : ApiController
     {
@@ -41,7 +41,7 @@ namespace xRM_Connector.Controllers
 
         public string Post(Lead lead)
         {
-            CrmConnection crmConnection = CrmConnection.Parse(ConfigurationManager.ConnectionStrings["IOTMLCRM"].ConnectionString);
+            CrmConnection crmConnection = CrmConnection.Parse(ConfigurationManager.ConnectionStrings["SwissDalilDemo"].ConnectionString);
             OrganizationService organizationService = new OrganizationService(crmConnection);
             Guid leadId = new Guid();
 
@@ -54,6 +54,7 @@ namespace xRM_Connector.Controllers
 
                 leadId = organizationService.Create(entity);
 
+                /*
                 EntityReference entRef = new EntityReference("lead", leadId);
 
                 Entity note = new Entity("annotation");
@@ -64,6 +65,7 @@ namespace xRM_Connector.Controllers
                 note.Attributes["objectid"] = entRef;
 
                 organizationService.Create(note);
+                */
             }
 
             return leadId.ToString();
